@@ -21,7 +21,7 @@ klass.class_eval do
 end
 
 new_objects = []
-new_objects = csv.inject([]) do |posts, row| 
+new_objects = csv.inject([]) do |new_objects, row| 
     new_objects << klass.new(*row)
 end
 csv.close
